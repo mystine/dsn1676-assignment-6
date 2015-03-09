@@ -24,3 +24,17 @@ $btnMove.on('click', function () {
 $btnCollapseExpand.on('click', function () {
     $panel.toggleClass('js-panel-expand');
 });
+    
+$btnBounce.on('click', function () {
+    $circle.addClass('js-circle-bounce');
+});
+
+$circle.on('animationend', function () {
+    $circle.removeClass('js-circle-bounce');
+});
+    
+$btnAppend.on('click', function () {
+    var $li = $('<li>New List Item</li>');
+    $list.prepend($li);
+    $li.addClass('js-list-append');
+});
