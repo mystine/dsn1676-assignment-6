@@ -49,15 +49,22 @@ div {
   transition: all 250ms linear;
 }
 
+.js-diamond-move 
+    -webkit-transform: translateX(-145px) rotate(45deg);
+    transform: translateX(-145px) rotate(45deg);
+}
+
 .panel {
   width: 250px;
   top: 50%;
-
   background-color: yellow;
   transform: translateY(-50%);
-
   color: darkgoldenrod;
   text-align: center;
+  max-height: 8em;
+  overflow: hidden;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 .panel h2 {
