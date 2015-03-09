@@ -5,7 +5,6 @@ html {
 body {
   margin: 2em auto;
   max-width: 35em;
-
   background-color: #fff;
   border: 1px solid #ccc;
 }
@@ -13,7 +12,6 @@ body {
 section {
   padding: 4em 1em;
   position: relative;
-
   border-bottom: 1px solid #ccc;
 }
 
@@ -35,6 +33,14 @@ div {
   -webkit-transition: all 250ms linear;
   transition: all 250ms linear;
   opacity: 1;
+}
+
+.js-box-dissappear {
+  opacity: 0;
+}
+
+section {
+  overflow: hidden;
 }
 
 .diamond {
@@ -84,6 +90,7 @@ div {
   width: 100px;
   background-color: orange;
   border-radius: 50%;
+  background-color: aqua;
 }
 
 .js-circle-bounce {
