@@ -67,6 +67,12 @@ div {
   transition: all 250ms linear;
 }
 
+.js-panel-expand {
+  max-height: 0;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+
 .panel h2 {
   margin: 0;
   padding: 3rem 0;
@@ -76,9 +82,31 @@ div {
   height: 100px;
   top: calc(50% - 50px);
   width: 100px;
-
   background-color: orange;
   border-radius: 50%;
+}
+
+.js-circle-bounce {
+  -webkit-animation: circle-bounce 1s linear;
+  animation: circle-bounce 1s linear;
+}
+
+@-webkit-keyframes circle-bounce {
+  0% {right: 30px; top: calc(50% - 40px);}
+  20% {right: 60px; top: calc(50% - 50px);}
+  40% {right: 90px; top: calc(50% - 40px);}
+  60% {right: 120px; top: calc(50% - 50px);}
+  80% {right: 150px; top: calc(50% - 40px);}
+  100% {right: 180px; top: calc(50% - 50px);}
+}
+
+@keyframes circle-bounce {
+  0% {right: 30px; top: calc(50% - 40px);}
+  20% {right: 60px; top: calc(50% - 50px);}
+  40% {right: 90px; top: calc(50% - 40px);}
+  60% {right: 120px; top: calc(50% - 50px);}
+  80% {right: 150px; top: calc(50% - 40px);}
+  100% {right: 180px; top: calc(50% - 50px);}
 }
 
 .list {
@@ -89,7 +117,6 @@ div {
   right: 1em;
   top: 1em;
   width: 250px;
-
   border: 1px solid #ccc;
   overflow: hidden;
   overflow-y: auto;
@@ -97,9 +124,24 @@ div {
 
 .list li {
   padding: 0.5em;
-
   background-color: plum;
   border: 1px solid mediumpurple;
-
   color: mediumpurple;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.js-list-append {
+  -webkit-animation: btn-append 1s linear;
+  animation: btn-append 1s linear;
+}
+
+@-webkit-keyframes btn-append {
+  0% {max-height: 0;}
+  100% {max-height: 2em;}
+}
+
+@keyframes btn-append {
+  0% {max-height: 0;}
+  100% {max-height: 2em;}
 }
