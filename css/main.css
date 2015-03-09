@@ -35,6 +35,14 @@ div {
   transition: all 200ms linear;
 }
 
+.js-show-hide {
+  opacity: 1;
+}
+
+.sect-diamond {
+  overflow: hidden;
+}
+
 .diamond {
   height: 80px;
   right: 2em;
@@ -47,10 +55,15 @@ div {
   transition: all 200ms linear;
 }
 
+.js-move {
+    right: 2em;
+}
+
 .panel {
   width: 250px;
   top: 50%;
   background-color: yellow;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   color: darkgoldenrod;
   text-align: center;
@@ -65,12 +78,83 @@ div {
   padding: 3rem 0;
 }
 
-.circle {
+.js-expand {
+    max-height: 100%;
+}
+
+.ball {
   height: 100px;
   top: calc(50% - 50px);
   width: 100px;
   border-radius: 50%;
   background-color: orange;
+}
+
+.js-ball-bounce {
+  -webkit-animation: ball-bounce 750ms linear;
+  animation: ball-bounce 750ms linear;
+}
+
+@-webkit-keyframes ball-bounce {
+  0% {
+    top: calc(50% - 50px);
+    right: 0;
+  }
+  50% {
+    top: calc(50% - 25px);
+    right: 4rem;
+  }
+  75% {
+    top: calc(50% - 50px);
+    right: 6.6rem;
+  }
+  87.5% {
+    top: calc(50% - 30px);
+    right: 8.4rem;
+  }
+  93.3% {
+    top: calc(50% - 50px);
+    right: 9.6rem;
+  }
+  96.5% {
+    top: calc(50% - 40px);
+    right: 10.4rem;
+  }
+  100% {
+    top: calc(50% - 50px);
+    right: 10.5rem;  
+  }
+}
+
+@keyframes ball-bounce {
+  0% {
+    top: calc(50% - 50px);
+    right: 0;
+  }
+  50% {
+    top: calc(50% - 25px);
+    right: 4rem;
+  }
+  75% {
+    top: calc(50% - 50px);
+    right: 6.6rem;
+  }
+  87.5% {
+    top: calc(50% - 30px);
+    right: 8.4rem;
+  }
+  93.3% {
+    top: calc(50% - 50px);
+    right: 9.6rem;
+  }
+  96.5% {
+    top: calc(50% - 40px);
+    right: 10.4rem;
+  }
+  100% {
+    top: calc(50% - 50px);
+    right: 10.5rem;  
+  }
 }
 
 .list {
@@ -95,79 +179,25 @@ div {
   opacity: 1;
 }
 
-.js-box-show-hide {
-    opacity: 1;
+.js-li-append {
+  -webkit-animation: list-append 200ms linear;
+  animation: list-append 200ms linear;
 }
 
-.js-box-move-inout {
-    right: 2em;
+@-webkit-keyframes list-append {
+  0% {
+    max-height: 0rem;
+  }
+  100% {
+    max-height: 2rem;
+  }
 }
 
-.js-box-collapse {
-    max-height: 10em;
-}
-
-.js-circle-bounce {
-    -webkit-animation: circle-bounce 1s linear;
-    animation: circle-bounce 1s linear;
-}
-
-@-webkit-keyframes circle-bounce {
-    0% {
-        top: 50px;
-    }
-    20% {
-        top: 15px;
-    }
-    30% {
-        right: 25px;
-    }
-    50% {
-        top: 50px;
-    }
-    55% {
-        right: 50px;
-    }
-    60% {
-        top: 8px;
-    }
-    80% {
-        right: 70px;
-    }
-    90% {
-        top: 50px;
-    }
-    100% {
-        right: 80px;
-    }
-}
-
-@keyframes circle-bounce {
-    0% {
-        top: 50px;
-    }
-    20% {
-        top: 15px;
-    }
-    30% {
-        right: 25px;
-    }
-    50% {
-        top: 50px;
-    }
-    55% {
-        right: 50px;
-    }
-    60% {
-        top: 8px;
-    }
-    80% {
-        right: 70px;
-    }
-    90% {
-        top: 50px;
-    }
-    100% {
-        right: 80px;
-    }
+@keyframes list-append {
+  0% {
+    max-height: 0rem;
+  }
+  100% {
+    max-height: 2rem;
+  }
 }
