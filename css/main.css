@@ -88,9 +88,8 @@ section {
   height: 100px;
   top: calc(50% - 50px);
   width: 100px;
-  background-color: orange;
   border-radius: 50%;
-  background-color: aqua;
+  background-color: orange;
 }
 
 .js-circle-bounce {
