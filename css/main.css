@@ -31,8 +31,10 @@ div {
   height: 100px;
   top: calc(50% - 50px);
   width: 200px;
-
   background-color: limegreen;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+  opacity: 1;
 }
 
 .diamond {
@@ -40,9 +42,11 @@ div {
   right: 2em;
   top: calc(50% - 40px);
   width: 80px;
-
   background-color: hotpink;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
 }
 
 .panel {
