@@ -16,3 +16,11 @@ var $list = $('.list');
 $btnShowHide.on('click', function () {
     $box.toggleClass('js-box-disapear;);
 });
+    
+$btnMove.on('click', function () {
+    $diamond.toggleClass('js-diamond-move');
+});
+    
+$btnCollapseExpand.on('click', function () {
+    $panel.toggleClass('js-panel-expand');
+});
