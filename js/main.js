@@ -32,3 +32,9 @@ $btnBounce.on('click', function() {
 $ball.on('webkitAnimationEnd animationend', function() {
     $ball.removeClass('js-ball-bounce');
 })
+
+$btnAppend.on('click', function() { 	 	
+    var $li = $('<li>New List Item</li>'); 	 	
+    $list.append($li); 	 	
+    $li.addClass('js-li-append'); 
+})
